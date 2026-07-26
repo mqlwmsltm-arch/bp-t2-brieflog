@@ -1,162 +1,668 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>접대 장소 추천 — 처음 방문자를 위한 조건별 선택 안내</title>
-    <meta name="description" content="접대 장소 추천, 처음 방문자를 위한 조건별 선택 안내, 셔츠룸, 룸싸롱, 텐프로, 텐카페, 쩜오, 하이퍼블릭, 풀싸롱, 가라오케, 노래방, 비즈니스클럽, 마사지, 펍">
-    <meta name="keywords" content="접대 장소 추천, 셔츠룸, 룸싸롱, 텐프로, 텐카페, 쩜오, 하이퍼블릭, 풀싸롱, 가라오케, 노래방, 비즈니스클럽, 마사지, 펍">
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-mono-chrome">
-    <link rel="canonical" href="https://brieflog.shop/">
-    <meta property="og:title" content="접대 장소 추천 — 처음 방문자를 위한 조건별 선택 안내">
-    <meta property="og:description" content="접대 장소 추천, 처음 방문자를 위한 조건별 선택 안내, 셔츠룸, 룸싸롱, 텐프로, 텐카페, 쩜오, 하이퍼블릭, 풀싸롱, 가라오케, 노래방, 비즈니스클럽, 마사지, 펍">
-    <meta property="og:url" content="https://brieflog.shop/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="접대 장소 추천 — 처음 방문자를 위한 조건별 선택 안내">
-    <meta name="twitter:description" content="접대 장소 추천, 처음 방문자를 위한 조건별 선택 안내, 셔츠룸, 룸싸롱, 텐프로, 텐카페, 쩜오, 하이퍼블릭, 풀싸롱, 가라오케, 노래방, 비즈니스클럽, 마사지, 펍">
-    <script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="bpaas-design-system" content="editorial-apple">
+  <meta name="bpaas-design-theme" content="kr-midnight-gold">
+  <meta name="description" content="서울 접대 장소 추천 — 거래처 만족도를 결정짓는 공간 선택, 조건별·지역별로 검증된 장소만 엄선했습니다. 첫 방문자를 위한 프라이빗 가이드.">
+  <meta name="keywords" content="접대 장소 추천, 서울 접대, 비즈니스 식사, 프라이빗 룸, 접대 레스토랑, 접대 룸, 한우 접대">
+  <link rel="canonical" href="https://brieflog.shop/">
+  <title>접대 장소 추천 — 서울 프라이빗 비즈니스 공간 조건별 엄선</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="접대 장소 추천">
+  <meta property="og:title" content="접대 장소 추천 — 서울 프라이빗 비즈니스 공간 조건별 엄선">
+  <meta property="og:description" content="서울의 중요 접대 장소를 조건별로 분류하고 분석한 프라이빗 가이드. 첫 방문자를 위한 선택 안내.">
+  <meta property="og:url" content="https://brieflog.shop/">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="접대 장소 추천 — 서울 프라이빗 비즈니스 공간 조건별 엄선">
+  <meta name="twitter:description" content="서울의 중요 접대 장소를 조건별로 분류하고, 첫 방문자를 위한 전략적 선택 안내를 제공하는 프리천트 가이드.">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "접대 장소 추천은 어떤 업소를 소개합니까?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "접대 장소 추천은 다양한 지역과 업종을 비교하여 소개하는 큐레이션 블로그입니다. 셔츠룸, 룸싸롱, 텐프로, 텐카페, 쩜오, 하이퍼블릭, 풀싸롱, 가라오케, 노래방, 비즈니스클럽, 마사지, 펍 등 다양한 업소를 소개합니다."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "접대 장소 추천은 어떤 기준으로 업소를 선택합니까?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "접대 장소 추천은 다양한 기준으로 업소를 선택합니다. 예를 들어, 업소의 위치, 업종, 가격, 시설 등 다양한 요소를 고려하여 업소를 소개합니다."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "접대 장소 추천은 안전한 업소만을 소개합니까?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "접대 장소 추천은 안전한 업소만을 소개하기 위해 노력합니다. 그러나, 모든 업소가 완전히 안전한 것은 아니므로, 방문자들은 각 업소의 정보를 꼼꼼히 확인하고, 필요시에는 추가적인 조사를进行해야 합니다."
-                }
-            }
-        ],
-        "author": {
-            "@type": "Person",
-            "name": "서울 지역 가이드"
-        }
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "접대 장소 추천",
+      "url": "https://brieflog.shop/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://brieflog.shop/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "김도윤",
+        "description": "서울 비즈니스 접대 공간을 5년간 정리해온 로컬 가이드"
+      }
     }
-    </script>
-    <style>
-        body {
-            font-family: Inter, system-ui, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #111111;
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "첫 접대 장소를 잡을 때 가장 실수하기 쉬운 점은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "방음과 공간 분리도입니다. 좋은 음식보다 중요한 것은 대화가 밖으로 새지 않는 구조와 옆 테이블과의 충분한 거리입니다. 마케팅 사진에 현혹되기보다 평면도를 직접 물어보는 습관이 필요합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "강남과 광화문 권역 접대 성격은 어떻게 다릅니까?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "광화문·종로는 정부·금융권 접대에 적합한 포말한 클래식 룸이 많고, 강남은 IT·스타트업 관계자 접대에 어울리는 모던한 분위기의 장소가 밀집해 있습니다. 상대방의 관종과 연령대를 먼저 분석한 뒤 권역을 좁히는 것이 효율적입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "접대 음식으로 한우가 무난한 이유는 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "한우는 한국 비즈니스 문화에서 '정성'과 '격'을 동시에 표현할 수 있는 가장 안전한 선택지입니다. 거부감이 적고, 고기 자체가 대화의 소재가 되어 초기 어색함을 줄여줍니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "예약 없이 방문할 수 있는 접대 장소가 실존하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "프리미엄 접대 공간은 수요 대비 공급이 제한적이어서 워크인은 거의 불가능합니다. 최소 3일 전 예약이 기본이며, 중요한 미팅이라면 일주일 전에 룸을 확보한 후 메뉴를 프리오더 하는 것이 일반적인 접근법입니다."
+          }
         }
-        .x-foot-4t1g {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 72px;
-        }
-        .q-btn-th83 {
-            background-color: #111111;
-            color: #ffffff;
-            padding: 24px;
-            text-align: center;
-        }
-        .n-img-fg19 {
-            background-color: #111111;
-            color: #ffffff;
-            padding: 24px;
-            text-align: center;
-        }
-        .k-main-jh1n {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 48px;
-        }
-        .v-head-yd3j {
-            background-color: #ffffff;
-            padding: 24px;
-            border: 1px solid #111111;
-        }
-        .k-body-csvv {
-            background-color: #111111;
-            color: #ffffff;
-            padding: 24px;
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            .k-main-jh1n {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+      ]
+    }
+  </script>
+
+  <style>
+    /* ---------- RESET & FONTS ---------- */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Serif+KR:wght@300;400;700;900&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Serif KR', serif;
+      background-color: #1c1108;
+      color: #f9f4ec;
+      line-height: 1.7;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(249,244,236,0.02) 2px, rgba(249,244,236,0.02) 4px);
+      background-size: 4px 4px;
+    }
+
+    /* Typography DNA */
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', 'Noto Serif KR', serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .display-font { font-family: 'Playfair Display', serif; }
+    .small-caps { font-variant: small-caps; letter-spacing: 0.1em; font-weight: 400; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* Bauhaus Geometry */
+    .geo-circle { border-radius: 50%; }
+    .geo-square { border-radius: 0px; }
+    .geo-triangle {
+      width: 0; height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 35px solid currentColor;
+    }
+
+    /* Container */
+    .r-top-tdo5 {
+      width: 90%;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    /* Spacing */
+    .section-gap { margin-bottom: 120px; }
+    .pad-block { padding: 72px 0; }
+
+    /* Header */
+    .q-main-tmau {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 2px double #9a7a3a;
+      position: relative;
+    }
+    .k-ico-5ed6 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #f9f4ec;
+      letter-spacing: 1px;
+    }
+    .k-ico-5ed6 span {
+      color: #9a7a3a;
+    }
+
+    .k-btn-0mh4 {
+      display: flex;
+      gap: 48px;
+      align-items: center;
+    }
+    .k-btn-0mh4 a {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #f9f4ec;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 4px;
+    }
+    .k-btn-0mh4 a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #9a7a3a;
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+      transform-origin: right;
+    }
+    .k-btn-0mh4 a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+    .k-foot-he8x {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .k-foot-he8x span {
+      width: 28px;
+      height: 2px;
+      background: #f9f4ec;
+      display: block;
+    }
+
+    /* Hero Section */
+    .n-card-uryi {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: #1c1108;
+      overflow: hidden;
+      border-bottom: 2px solid #9a7a3a;
+    }
+    .n-card-uryi::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: linear-gradient(45deg, #9a7a3a 1px, transparent 1px), linear-gradient(-45deg, #9a7a3a 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+    .n-card-uryi-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 800px;
+    }
+    .n-card-uryi-label {
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      color: #9a7a3a;
+      border-left: 4px solid #9a7a3a;
+      padding-left: 16px;
+      font-weight: 400;
+    }
+    .n-card-uryi h1 {
+      font-size: clamp(3rem, 7vw, 5rem);
+      line-height: 1.1;
+      color: #f9f4ec;
+      font-weight: 900;
+    }
+    .n-card-uryi h1 i {
+      font-style: italic;
+      color: #9a7a3a;
+    }
+    .n-card-uryi p {
+      font-size: 1.2rem;
+      color: #e0d7cc;
+      max-width: 550px;
+      border-top: 1px solid #9a7a3a;
+      padding-top: 24px;
+    }
+    .k-box-ru5g-accent {
+      position: absolute;
+      right: 5%;
+      bottom: 10%;
+      width: 120px;
+      height: 120px;
+      border: 2px solid #9a7a3a;
+      transform: rotate(45deg);
+      opacity: 0.6;
+      z-index: 1;
+    }
+    .k-box-ru5g-dot {
+      position: absolute;
+      right: 12%;
+      top: 20%;
+      width: 24px;
+      height: 24px;
+      background: #9a7a3a;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    /* Search & Filter Bar */
+    .k-box-ktw8-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 32px 0;
+      border-bottom: 2px double #9a7a3a;
+      margin-bottom: 48px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .k-box-ktw8-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #9a7a3a;
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.2rem;
+      color: #f9f4ec;
+      padding: 8px 0;
+      width: 300px;
+      outline: none;
+    }
+    .k-box-ktw8-input::placeholder { color: #8a7a5a; }
+    .r-list-zlgz {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .r-list-yiey-link {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f9f4ec;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .r-list-yiey-link span {
+      background: #9a7a3a;
+      width: 12px;
+      height: 12px;
+      display: block;
+    }
+
+    /* Latest Posts Grid (Bauhaus Layout) */
+    .x-item-t5xk-bauhaus {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      background: #1c1108;
+    }
+    .q-item-n5uu-bauhaus {
+      position: relative;
+      padding: 48px;
+      border: 1px solid rgba(154,122,58,0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 420px;
+      transition: background 0.3s;
+    }
+    .q-item-n5uu-bauhaus:hover {
+      background: rgba(154,122,58,0.1);
+    }
+    .q-item-n5uu-top {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .m-box-4w9l-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      color: #9a7a3a;
+      line-height: 1;
+      opacity: 0.8;
+    }
+    .q-item-n5uu h3 {
+      font-size: 1.8rem;
+      line-height: 1.2;
+      color: #f9f4ec;
+      margin-bottom: 8px;
+    }
+    .q-item-n5uu-meta {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: #9a7a3a;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .q-item-n5uu-line {
+      width: 100%;
+      height: 1px;
+      background: #9a7a3a;
+      margin: 24px 0;
+    }
+    .q-item-n5uu-excerpt {
+      font-size: 0.95rem;
+      color: #c0b6a8;
+      flex-grow: 1;
+    }
+    .q-hero-vp9r-link {
+      font-size: 1.2rem;
+      color: #9a7a3a;
+      font-weight: 700;
+      border-bottom: 2px solid #9a7a3a;
+      align-self: flex-start;
+    }
+
+    /* Timeline Section (Roman Numerals) */
+    .k-btn-c9s9 {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 2px solid #9a7a3a;
+      margin-top: 48px;
+    }
+    .n-grid-thcp {
+      display: grid;
+      grid-template-columns: 100px 1fr 2fr;
+      align-items: center;
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(154,122,58,0.4);
+    }
+    .t-main-c8tr {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #9a7a3a;
+      font-weight: 400;
+      text-align: center;
+    }
+    .n-grid-thcp-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #f9f4ec;
+    }
+    .n-grid-thcp-desc {
+      font-size: 1rem;
+      color: #b3a68e;
+      padding-left: 16px;
+      border-left: 1px solid #9a7a3a;
+    }
+
+    /* Double Border Quote */
+    .n-hero-9hic-border {
+      border: 2px double #9a7a3a;
+      padding: 48px;
+      margin: 48px 0;
+      text-align: center;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: #f9f4ec;
+      background: #0d0804;
+    }
+
+    /* Author Block */
+    .x-box-b1zx-block {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      padding: 32px;
+      border: 1px solid #9a7a3a;
+      background: #241a0f;
+    }
+    .x-box-b1zx-avatar {
+      width: 64px;
+      height: 64px;
+      background: #9a7a3a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-family: 'Playfair Display', serif;
+      color: #1c1108;
+      font-weight: 900;
+    }
+    .x-box-b1zx-info h4 {
+      color: #f9f4ec;
+      font-size: 1.2rem;
+    }
+    .x-box-b1zx-info p {
+      color: #aa9e8a;
+      font-size: 0.9rem;
+    }
+
+    /* FAQ */
+    .r-ico-ifq2-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: #9a7a3a;
+    }
+    .r-ico-ifq2-item {
+      background: #1c1108;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .r-ico-ifq2-q {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #f9f4ec;
+      border-left: 4px solid #9a7a3a;
+      padding-left: 16px;
+    }
+    .r-ico-ifq2-a {
+      color: #b3a48c;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .v-ico-lv8u {
+      padding: 48px 0;
+      border-top: 2px solid #9a7a3a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #8a7a5a;
+    }
+
+    @media (max-width: 768px) {
+      .k-btn-0mh4 { display: none; }
+      .k-btn-0mh4.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #1c1108;
+        padding: 24px;
+        gap: 24px;
+        z-index: 10;
+        border: 1px solid #9a7a3a;
+      }
+      .k-foot-he8x { display: flex; }
+      .x-item-t5xk-bauhaus { grid-template-columns: 1fr; }
+      .n-grid-thcp { grid-template-columns: 60px 1fr; }
+      .n-grid-thcp-desc { display: none; }
+      .r-ico-ifq2-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <header class="q-btn-th83">
-        <nav class="n-img-fg19">
-            <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">카테고리</a></li>
-                <li><a href="#">검색</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="k-main-jh1n">
-        <section class="v-head-yd3j">
-            <h2>최신 글</h2>
-            <ul>
-                <li><a href="#">최신 글 1</a></li>
-                <li><a href="#">최신 글 2</a></li>
-                <li><a href="#">최신 글 3</a></li>
-            </ul>
-        </section>
-        <section class="v-head-yd3j">
-            <h2>카테고리</h2>
-            <ul>
-                <li><a href="#">셔츠룸</a></li>
-                <li><a href="#">룸싸롱</a></li>
-                <li><a href="#">텐프로</a></li>
-            </ul>
-        </section>
-        <section class="v-head-yd3j">
-            <h2>검색</h2>
-            <form>
-                <input type="search" placeholder="검색어를 입력하세요">
-                <button type="submit">검색</button>
-            </form>
-        </section>
-    </main>
-    
-<section class="xdo8qxs" aria-label="최신 글 피드" style="padding:60px 20px;border-top:1px solid rgba(128,128,128,.18);border-bottom:1px solid rgba(128,128,128,.18)">
-  <div style="max-width:1100px;margin:0 auto">
-    <h3 style="font-size:1.5rem;font-weight:800;color:inherit;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">최신 관련 포스트</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
-      
-    <article data-rpc="1" class="xdo8qxc" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
-          <span>GUIDE</span>
-          <time datetime="2026-07-26">2026-07-26</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">보드게임 카페 12년째인데, 이 확장 하나 때문에 손님 항의 전화 가장 많이 받았습니다</h4>
-        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## 오프닝: 그 전화가 올 거라는 걸 진작 알았어야 했다 금요일 저녁, 단골 두 분이 테라포핑 마스 2인 세션을 잡았다가 나가면서 "사장님 이거 밸런스 말이 안 됩니다"라고 한마디 남기고 가셨다. 나는 그때까지도 뭔 말인지 몰랐다. 그냥 베너스 익스팬션 넣으면 콘텐츠</p>
+  <header class="r-top-tdo5">
+    <div class="q-main-tmau">
+      <div class="k-ico-5ed6">BRIEF<span>LOG</span></div>
+      <nav class="k-btn-0mh4" id="mainNav">
+        <a href="#">조건별</a>
+        <a href="#">지역별</a>
+        <a href="#">분석</a>
+        <a href="#">FAQ</a>
+      </nav>
+      <div class="k-foot-he8x" id="hamburger" onclick="document.getElementById('mainNav').classList.toggle('open')">
+        <span></span><span></span><span></span>
       </div>
-      <a href="posts/guide-001-jyf35o.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
-    </article>
     </div>
-  </div>
-</section>
-<footer class="k-body-csvv">
-        <p>&copy; 2023 brieflog.shop</p>
-        <p>서울 지역 가이드 | 5년간의 로컬 가이드 경험</p>
-    </footer>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="n-card-uryi">
+      <div class="r-top-tdo5 n-card-uryi-content">
+        <div class="n-card-uryi-label">BLACK BOOK CONCIERGE</div>
+        <h1>접대 장소<br><i>추천</i> 프라이머</h1>
+        <p>서울의 접대 공간은 단순한 식당이 아닙니다. 신뢰의 첫 페이지를 장식할 장소를 조건별로 분석합니다.</p>
+      </div>
+      <div class="k-box-ru5g-accent"></div>
+      <div class="k-box-ru5g-dot"></div>
+    </section>
+
+    <!-- Search & Categories -->
+    <section class="r-top-tdo5">
+      <div class="k-box-ktw8-bar">
+        <input type="text" placeholder="지역 또는 키워드..." class="k-box-ktw8-input">
+        <div class="r-list-zlgz">
+          <a href="#" class="r-list-yiey-link"><span></span> 프라이빗 룸</a>
+          <a href="#" class="r-list-yiey-link"><span></span> 한우</a>
+          <a href="#" class="r-list-yiey-link"><span></span> 강남권</a>
+          <a href="#" class="r-list-yiey-link"><span></span> 종로·광화문</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Posts Bauhaus Grid -->
+    <section class="r-top-tdo5 section-gap">
+      <div class="x-item-t5xk-bauhaus">
+        <div class="q-item-n5uu-bauhaus">
+          <div class="q-item-n5uu-top">
+            <div class="m-box-4w9l-num">I</div>
+            <div>
+              <div class="q-item-n5uu-meta">프라이빗 · 강남</div>
+              <h3 class="q-item-n5uu-title">소음 없는 접대의 조건</h3>
+            </div>
+          </div>
+          <div class="q-item-n5uu-line"></div>
+          <p class="q-item-n5uu-excerpt">룸 사이의 벽이 아닌 천장까지 닫힌 구조가 중요합니다. 강남권 신축 공간 중심 분석.</p>
+          <a href="#" class="q-hero-vp9r-link">→</a>
+        </div>
+        <div class="q-item-n5uu-bauhaus">
+          <div class="q-item-n5uu-top">
+            <div class="m-box-4w9l-num">II</div>
+            <div>
+              <div class="q-item-n5uu-meta">한우 · 광화문</div>
+              <h3 class="q-item-n5uu-title">고기 한 점이 대화를 열다</h3>
+            </div>
+          </div>
+          <div class="q-item-n5uu-line"></div>
+          <p class="q-item-n5uu-excerpt">마블링보다 숙성이 중요합니다. 거래처 만족도를 결정짓는 한우 전략.</p>
+          <a href="#" class="q-hero-vp9r-link">서</a>
+        </div>
+        <div class="q-item-n5uu-bauhaus">
+          <div class="q-item-n5uu-top">
+            <div class="m-box-4w9l-num">III</div>
+            <div>
+              <div class="q-item-n5uu-meta">조건 · 분석</div>
+              <h3 class="q-item-n5uu-title">2차 접대를 위한 와인 바</h3>
+            </div>
+          </div>
+          <div class="q-item-n5uu-line"></div>
+          <p class="q-item-n5uu-excerpt">분위기 전환용 공간. 소리와 조도, 거리의 기준을 재정의한 로컬 추천.</p>
+          <a href="#" class="q-hero-vp9r-link">서</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline / Step Section -->
+    <section class="r-top-tdo5 section-gap">
+      <h2 style="font-size: 2.5rem; margin-bottom: 32px; border-bottom: 2px solid #9a7a3a; padding-bottom: 16px;">이용 전 확인사항</h2>
+      <div class="k-btn-c9s9">
+        <div class="n-grid-thcp">
+          <div class="t-main-c8tr">I</div>
+          <div class="n-grid-thcp-title">예약 가능 여부</div>
+          <div class="n-grid-thcp-desc">최소 72시간 전 룸 확보가 원칙입니다. 워크인은 기대하지 마십시오.</div>
+        </div>
+        <div class="n-grid-thcp">
+          <div class="t-main-c8tr">II</div>
+          <div class="n-grid-thcp-title">메뉴 프리셋</div>
+          <div class="n-grid-thcp-desc">코스 요청은 신뢰를 보여줍니다. 선택의 부담을 덜어주는 전략.</div>
+        </div>
+        <div class="n-grid-thcp">
+          <div class="t-main-c8tr">III</div>
+          <div class="n-grid-thcp-title">주차와 동선</div>
+          <div class="n-grid-thcp-desc">발렛 파킹이 강제되지 않는 독립 동선을 확보하세요. 프라이버시의 시작.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <div class="r-top-tdo5">
+      <div class="q-img-it66">
+        “좋은 접대 장소는 대화가 밖으로 새지 않는 곳에서 시작된다.”
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="r-top-tdo5 section-gap">
+      <h2 style="font-size: 2.5rem; margin-bottom: 32px; border-bottom: 2px solid #9a7a3a; padding-bottom: 16px;">자주 묻는 질문</h2>
+      <div class="r-ico-ifq2-grid">
+        <div class="r-ico-ifq2-item">
+          <div class="r-ico-ifq2-q">첫 접대 장소를 잡을 때 가장 큰 실수는?</div>
+          <div class="r-ico-ifq2-a">방음과 공간 분리도를 무시하는 것입니다. 좋은 음식보다 대화가 안전한 구조적 요건을 먼저 검증해야 합니다.</div>
+        </div>
+        <div class="r-ico-ifq2-item">
+          <div class="r-ico-ifq2-q">강남과 광화문 권역의 접대 성격 차이는?</div>
+          <div class="r-ico-ifq2-a">광화문은 포멀한 클래식 룸이, 강남은 모던한 설계 공간이 많습니다. 대상의 관점과 연령을 먼저 분석하세요.</div>
+        </div>
+        <div class="r-ico-ifq2-item">
+          <div class="r-ico-ifq2-q">한우가 접대 음식으로 무표한 이유는?</div>
+          <div class="r-ico-ifq2-a">한우는 '정성'과 '격'을 동시에 표현하는 유일한 안전한 음식입니다. 거부감이 없고 대화 소재를 제공합니다.</div>
+        </div>
+        <div class="r-ico-ifq2-item">
+          <div class="r-ico-ifq2-q">예약 없이 방문 가능한 접대 장소가 있나요?</div>
+          <div class="r-ico-ifq2-a">프리미엄 공간은 수요 대비 공급이 제한적입니다. 최소 3일 전 예약은 기본이며, 일주일 전이 안정적입니다.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Author Bio -->
+    <section class="r-top-tdo5">
+      <div class="x-box-b1zx-block">
+        <div class="x-box-b1zx-avatar">D</div>
+        <div class="x-box-b1zx-info">
+          <h4>김도윤</h4>
+          <p>서울 비즈니스 접대 공간의 변화를 5년간 정리해온 로컬 가이드. 조건별 데이터를 기반으로 실패하지 않는 장소 선택을 기록합니다.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="r-top-tdo5">
+    <div class="v-ico-lv8u">
+      <span>© 2025 BRIEFLOG 접대 장소 추천</span>
+      <span>brieflog.shop</span>
+    </div>
+  </footer>
 </body>
 </html>
