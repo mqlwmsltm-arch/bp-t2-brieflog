@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://brieflog.shop/sitemap.xml
+Sitemap: https://brieflog.shop/sitemap-pages.xml
 Sitemap: https://brieflog.shop/sitemap-index.xml
