@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · t2-brieflog</title>
+  <meta name="description" content="t2-brieflog에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://brieflog.shop/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* ---------- RESET & FONTS ---------- */
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Serif+KR:wght@300;400;700;900&display=swap');
+
+ *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ html { scroll-behavior: smooth; }
+ body {
+ font-family: 'Noto Serif KR', serif;
+ background-color: #1c1108;
+ color: #f9f4ec;
+ line-height: 1.7;
+ font-weight: 300;
+ -webkit-font-smoothing: antialiased;
+ background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(249,244,236,0.02) 2px, rgba(249,244,236,0.02) 4px);
+ background-size: 4px 4px;
+ }
+
+ /* Typography DNA */
+ h1, h2, h3, h4 {
+ font-family: 'Playfair Display', 'Noto Serif KR', serif;
+ font-weight: 700;
+ letter-spacing: -0.02em;
+ }
+ .display-font { font-family: 'Playfair Display', serif; }
+ .small-caps { font-variant: small-caps; letter-spacing: 0.1em; font-weight: 400; }
+
+ a { text-decoration: none; color: inherit; }
+
+ /* Bauhaus Geometry */
+ .geo-circle { border-radius: 50%; }
+ .geo-square { border-radius: 0px; }
+ .geo-triangle {
+ width: 0; height: 0;
+ border-left: 20px solid transparent;
+ border-right: 20px solid transparent;
+ border-bottom: 35px solid currentColor;
+ }
+
+ /* Container */
+ .r-top-tdo5 {
+ width: 90%;
+ max-width: 1320px;
+ margin: 0 auto;
+ }
+
+ /* Spacing */
+ .section-gap { margin-bottom: 120px; }
+ .pad-block { padding: 72px 0; }
+
+ /* Header */
+ .q-main-tmau {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 24px 0;
+ border-bottom: 2px double #9a7a3a;
+ position: relative;
+ }
+ .k-ico-5ed6 {
+ font-family: 'Playfair Display', serif;
+ font-size: 1.8rem;
+ font-weight: 900;
+ color: #f9f4ec;
+ letter-spacing: 1px;
+ }
+ .k-ico-5ed6 span {
+ color: #9a7a3a;
+ }
+
+ .k-btn-0mh4 {
+ display: flex;
+ gap: 48px;
+ align-items: center;
+ }
+ .k-btn-0mh4 a {
+ font-size: 0.85rem;
+ font-weight: 400;
+ color: #f9f4ec;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ position: relative;
+ padding-bottom: 4px;
+ }
+ .k-btn-0mh4 a::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 1px;
+ background: #9a7a3a;
+ transform: scaleX(0);
+ transition: transform 0.2s ease;
+ transform-origin: right;
+ }
+ .k-btn-0mh4 a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+ .k-foot-he8x {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ }
+ .k-foot-he8x span {
+ width: 28px;
+ height: 2px;
+ background: #f9f4ec;
+ display: block;
+ }
+
+ /* Hero Section */
+ .n-card-uryi {
+ position: relative;
+ min-height: 70vh;
+ display: flex;
+ align-items: center;
+ background: #1c1108;
+ overflow: hidden;
+ border-bottom: 2px solid #9a7a3a;
+ }
+ .n-card-uryi::before {
+ content: '';
+ position: absolute;
+ top: 0; left: 0; width: 100%; height: 100%;
+ background-image: linear-gradient(45deg, #9a7a3a 1px, transparent 1px), linear-gradient(-45deg, #9a7a3a 1px, transparent 1px);
+ background-size: 40px 40px;
+ opacity: 0.05;
+ pointer-events: none;
+ }
+ .n-card-uryi-content {
+ position: relative;
+ z-index: 2;
+ display: flex;
+ flex-direction: column;
+ gap: 24px;
+ max-width: 800px;
+ }
+ .n-card-uryi-label {
+ font-size: 0.9rem;
+ letter-spacing: 0.2em;
+ color: #9a7a3a;
+ border-left: 4px solid #9a7a3a;
+ padding-left: 16px;
+ font-weight: 400;
+ }
+ .n-card-uryi h1 {
+ font-size: clamp(3rem, 7vw, 5rem);
+ line-height: 1.1;
+ color: #f9f4ec;
+ font-weight: 900;
+ }
+ .n-card-uryi h1 i {
+ font-style: italic;
+ color: #9a7a3a;
+ }
+ .n-card-uryi p {
+ font-size: 1.2rem;
+ color: #e0d7cc;
+ max-width: 550px;
+ border-top: 1px solid #9a7a3a;
+ padding-top: 24px;
+ }
+ .k-box-ru5g-accent {
+ position: absolute;
+ right: 5%;
+ bottom: 10%;
+ width: 120px;
+ height: 120px;
+ border: 2px solid #9a7a3a;
+ transform: rotate(45deg);
+ opacity: 0.6;
+ z-index: 1;
+ }
+ .k-box-ru5g-dot {
+ position: absolute;
+ right: 12%;
+ top: 20%;
+ width: 24px;
+ height: 24px;
+ background: #9a7a3a;
+ border-radius: 50%;
+ z-index: 1;
+ }
+
+ /* Search & Filter Bar */
+ .k-box-ktw8-bar {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 24px;
+ padding: 32px 0;
+ border-bottom: 2px double #9a7a3a;
+ margin-bottom: 48px;
+ align-items: center;
+ justify-content: space-between;
+ }
+ .k-box-ktw8-input {
+ background: transparent;
+ border: none;
+ border-bottom: 1px solid #9a7a3a;
+ font-family: 'Noto Serif KR', serif;
+ font-size: 1.2rem;
+ color: #f9f4ec;
+ padding: 8px 0;
+ width: 300px;
+ outline: none;
+ }
+ .k-box-ktw8-input::placeholder { color: #8a7a5a; }
+ .r-list-zlgz {
+ display: flex;
+ gap: 32px;
+ flex-wrap: wrap;
+ }
+ .r-list-yiey-link {
+ font-weight: 700;
+ font-size: 1rem;
+ color: #f9f4ec;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+ .r-list-yiey-link span {
+ background: #9a7a3a;
+ width: 12px;
+ height: 12px;
+ display: block;
+ }
+
+ /* Latest Posts Grid (Bauhaus Layout) */
+ .x-item-t5xk-bauhaus {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 0;
+ background: #1c1108;
+ }
+ .q-item-n5uu-bauhaus {
+ position: relative;
+ padding: 48px;
+ border: 1px solid rgba(154,122,58,0.3);
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ min-height: 420px;
+ transition: background 0.3s;
+ }
+ .q-item-n5uu-bauhaus:hover {
+ background: rgba(154,122,58,0.1);
+ }
+ .q-item-n5uu-top {
+ display: flex;
+ gap: 16px;
+ align-items: flex-start;
+ }
+ .m-box-4w9l-num {
+ font-family: 'Playfair Display', serif;
+ font-size: 4rem;
+ font-weight: 900;
+ color: #9a7a3a;
+ line-height: 1;
+ opacity: 0.8;
+ }
+ .q-item-n5uu h3 {
+ font-size: 1.8rem;
+ line-height: 1.2;
+ color: #f9f4ec;
+ margin-bottom: 8px;
+ }
+ .q-item-n5uu-meta {
+ font-size: 0.8rem;
+ letter-spacing: 0.1em;
+ color: #9a7a3a;
+ text-transform: uppercase;
+ margin-bottom: 16px;
+ }
+ .q-item-n5uu-line {
+ width: 100%;
+ height: 1px;
+ background: #9a7a3a;
+ margin: 24px 0;
+ }
+ .q-item-n5uu-excerpt {
+ font-size: 0.95rem;
+ color: #c0b6a8;
+ flex-grow: 1;
+ }
+ .q-hero-vp9r-link {
+ font-size: 1.2rem;
+ color: #9a7a3a;
+ font-weight: 700;
+ border-bottom: 2px solid #9a7a3a;
+ align-self: flex-start;
+ }
+
+ /* Timeline Section (Roman Numerals) */
+ .k-btn-c9s9 {
+ display: flex;
+ flex-direction: column;
+ gap: 0;
+ border-top: 2px solid #9a7a3a;
+ margin-top: 48px;
+ }
+ .n-grid-thcp {
+ display: grid;
+ grid-template-columns: 100px 1fr 2fr;
+ align-items: center;
+ padding: 32px 0;
+ border-bottom: 1px solid rgba(154,122,58,0.4);
+ }
+ .t-main-c8tr {
+ font-family: 'Playfair Display', serif;
+ font-size: 3rem;
+ color: #9a7a3a;
+ font-weight: 400;
+ text-align: center;
+ }
+ .n-grid-thcp-title {
+ font-size: 1.6rem;
+ font-weight: 700;
+ color: #f9f4ec;
+ }
+ .n-grid-thcp-desc {
+ font-size: 1rem;
+ color: #b3a68e;
+ padding-left: 16px;
+ border-left: 1px solid #9a7a3a;
+ }
+
+ /* Double Border Quote */
+ .n-hero-9hic-border {
+ border: 2px double #9a7a3a;
+ padding: 48px;
+ margin: 48px 0;
+ text-align: center;
+ font-size: 1.4rem;
+ font-style: italic;
+ color: #f9f4ec;
+ background: #0d0804;
+ }
+
+ /* Author Block */
+ .x-box-b1zx-block {
+ display: flex;
+ gap: 24px;
+ align-items: center;
+ padding: 32px;
+ border: 1px solid #9a7a3a;
+ background: #241a0f;
+ }
+ .x-box-b1zx-avatar {
+ width: 64px;
+ height: 64px;
+ background: #9a7a3a;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 2rem;
+ font-family: 'Playfair Display', serif;
+ color: #1c1108;
+ font-weight: 900;
+ }
+ .x-box-b1zx-info h4 {
+ color: #f9f4ec;
+ font-size: 1.2rem;
+ }
+ .x-box-b1zx-info p {
+ color: #aa9e8a;
+ font-size: 0.9rem;
+ }
+
+ /* FAQ */
+ .r-ico-ifq2-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2px;
+ background: #9a7a3a;
+ }
+ .r-ico-ifq2-item {
+ background: #1c1108;
+ padding: 40px;
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+ }
+ .r-ico-ifq2-q {
+ font-size: 1.3rem;
+ font-weight: 700;
+ color: #f9f4ec;
+ border-left: 4px solid #9a7a3a;
+ padding-left: 16px;
+ }
+ .r-ico-ifq2-a {
+ color: #b3a48c;
+ font-size: 0.95rem;
+ }
+
+ /* Footer */
+ .v-ico-lv8u {
+ padding: 48px 0;
+ border-top: 2px solid #9a7a3a;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: 0.8rem;
+ color: #8a7a5a;
+ }
+
+ @media (max-width: 768px) {
+ .k-btn-0mh4 { display: none; }
+ .k-btn-0mh4.open {
+ display: flex;
+ flex-direction: column;
+ position: absolute;
+ top: 80px;
+ left: 0;
+ width: 100%;
+ background: #1c1108;
+ padding: 24px;
+ gap: 24px;
+ z-index: 10;
+ border: 1px solid #9a7a3a;
+ }
+ .k-foot-he8x { display: flex; }
+ .x-item-t5xk-bauhaus { grid-template-columns: 1fr; }
+ .n-grid-thcp { grid-template-columns: 60px 1fr; }
+ .n-grid-thcp-desc { display: none; }
+ .r-ico-ifq2-grid { grid-template-columns: 1fr; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · t2-brieflog">
+  <meta property="og:description" content="t2-brieflog에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://brieflog.shop/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="r-top-tdo5">
+ <div class="q-main-tmau">
+ <div class="k-ico-5ed6">BRIEF<span>LOG</span></div>
+ <nav class="k-btn-0mh4" id="mainNav">
+ <a href="#">조건별</a>
+ <a href="#">지역별</a>
+ <a href="#">분석</a>
+ <a href="#">FAQ</a>
+ </nav>
+ <div class="k-foot-he8x" id="hamburger" onclick="document.getElementById('mainNav').classList.toggle('open')">
+ <span></span><span></span><span></span>
+ </div>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 34개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-1oi2sdp.html">업계에선 다 알지만 우리끼리만 공유하는 접대 장소 추천의 내막</a>
+        <p class="post-item__summary">업계 종사자들이 오랫동안 쌓아온 노하우를 토대로 접대 장소 추천을 해보겠습니다. 먼저, 가격대별 원가 구조를 파악하는 것이 중요합니다. 예를 들어, 중급 가격대의 접대 장소에서는 원가 대비 마진율이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-002-u97txv.html">바이어 접대 장소 추천만큼 까다로운 글룸헤이븐 1판 밀봉 감별법과 카드 7종의 실체</a>
+        <p class="post-item__summary">글룸헤이븐 1판 밀봉 박스를 열었을 때 주문직인의 마나 볼트 선공권 수치가 07인지 12인지에 따라 매입가가 10만 원 넘게 차이 난다는 사실을 알고 계십니까? 어떤 수집가는 1판의 무법자 카드를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-002-x8p0g1.html">1판이냐 2판이냐, 카드 한 장 차이가 수만 원 차이나는 글룸헤이븐</a>
+        <p class="post-item__summary">1판과 2판을 같은 가격에 받으면 이득인 거야, 손해인 거야.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-cgq0qu.html">데커드 유니콘 꿈, 진짜 각본엔 없던 장면이었다는 걸 아는 형님들?</a>
+        <p class="post-item__summary">데커드가 피아노 앞에서 유니콘 꿈을 꾸는 장면, 그거 리들리 스콧이 오랫동안 준비한 복선이라고들 말한다. 틀린 말은 아니다. 근데 제작 과정을 뒤지면 이야기가 살짝 다르다. 내가 오늘 할 얘기는 그</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-pv46p1.html">형님, 네이버 첫 화면 접대장소 리뷰 800개는 다 광고입니다</a>
+        <p class="post-item__summary">2024년 11월 기준으로, 강남역 반경 1km 접대 업소들의 온라인 노출 순위는 거의 전부 유료 광고로 채워져 있다. 네이버 블로그 상단 리뷰 세 개 중 두 개는 업체 제공 쿠폰 조건이 붙어 있고</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-005-yc9k8n.html">글룸헤이븐 카드 한 장 분실하면 카페 사장은 로딩 화면이 뜬다</a>
+        <p class="post-item__summary">글룸헤이븐 1판 구성품 총 1,702개, 2판은 2,077개. 이 숫자 사이에 375개 차이가 있고, 그 안에 클래식 에디션과 리테일 에디션 사이에 숨겨진 카드 리visions가 7종존재한다. 나는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-1bnbrzz.html">접대 장소 추천으로 머리 터질 때 써먹는 파이트 클럽식 프레임 조작법</a>
+        <p class="post-item__summary">1/24초, 그러니까 정확히 41.67밀리초 동안 영사기 셔터가 열렸다 닫히는 찰나가 있다. 잘 몰라서 그러는데, 흔히 영화학자들은 데이빗 핀처가 관객의 무의식을 흔들기 위해 타일러 더든을 본편 등</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-jyf35o.html">보드게임 카페 12년째인데, 이 확장 하나 때문에 손님 항의 전화 가장 많이 받았습니다</a>
+        <p class="post-item__summary">금요일 저녁, 단골 두 분이 테라포핑 마스 2인 세션을 잡았다가 나가면서 &quot;사장님 이거 밸런스 말이 안 됩니다&quot;라고 한마디 남기고 가셨다. 나는 그때까지도 뭔 말인지 몰랐다. 그냥 베너스 익스팬션 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-19kbk8e.html">글룸헤븐 1판 카드 버리지 마라, 2판과 이 7장 차이 모르면 접대하다 망한다</a>
+        <p class="post-item__summary">1판과 2판을 같은 게임으로 아는 순간, 테이블 분위기 망친다. 카드 효과가 달라서 &quot;이거 원래 이렇게 센 거 아녔어?&quot; 소리 나오면 그날 모임은 거기서 끝이다. 특히 거래처 상대나 중요 손님 접대</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-1usyaxj.html">월 3천 찍고도 6개월 만에 접은 홍대 가게의 원가 장부</a>
+        <p class="post-item__summary">영수증 끝자리에 적힌 부가세 10%가 월 300만 원이었을 때, 나는 그게 가장 큰 출혈이라는 걸 몰랐다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-101dvzt.html">글룸헤이븐 2판 클래스카드 7장 바뀐 거 1판이랑 섞이면 실전에서 벌어지는 일</a>
+        <p class="post-item__summary">2017년 초, Cephalofair Games가 2판 인쇄를 돌리면서 클래스카드 7장을 보정했다. 잘 몰라서 그런데, 이게 단순 오타 수정이 아니라 공격력과 XP 배분 자체가 달라진 거라서 1판 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-56gkzo.html">접대용 룸 잡을 때 시간당 15만원과 35만원의 차이는 인테리어가 아니라 수도세다</a>
+        <p class="post-item__summary">임차인 명의로 수도 계량기가 2개 달려 있던 그 가게, 권리금 2억 받고 넘긴 실거래 내역서를 우연히 다시 보게 됐다. 양도일 기준 월 매출 8,400만원짜리 룸 9개 규모 업장이었는데, 순이익률이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-11l0k8z.html">2억 권리금 받고 나간 홍대 가게 기록서</a>
+        <p class="post-item__summary">지난 1월, 홍대입구역 2번 출구에서 세차례 간판을 바꾼 그 자리에 또 손님이 들어왔다. 필자는 2019년부터 그 건물 임대차 계약을 세 건째 중개했고, 이번 세입자한테 솔직하게 말했다. &quot;여기 전</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-ltghy4.html">절판된 보드게임 확장팩 사기당한 후기</a>
+        <p class="post-item__summary">라벨에 'Made in Germany'가 찍힌 걸 확인한 순간, 이미 손해는 확정이었다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-rk937s.html">접대 장소 고를 때 데이터마이닝 마인드셋이 필요한 이유</a>
+        <p class="post-item__summary">---</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-hbapys.html">격식 있는 비즈니스 다이닝을 위한 룸 예약 전략</a>
+        <p class="post-item__summary">비즈니스 접대라는 건 결국 상대의 시간을 어떻게 설계하느냐의 문제다. 요즘 젊은 친구들은 분위기 좋은 창가 자리면 다 해결되는 줄 아는데, 실상은 다르다. 서울의 고급 식당에서 정작 중요한 건 그놈</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003-1latzsl.html">영화 판때기 뒤흔든 1프레임의 비밀과 실패하지 않는 접대 장소 추천의 공통분모</a>
+        <p class="post-item__summary">1999년 3월 LA의 한 어두운 편집실, &quot;핀처, 이 1/24초짜리 프레임 때문에 심의 등급이 날아갈 수도 있어&quot;라고 내가 경고했을 때 감독은 씩 웃으며 담배 필터를 씹어 돌렸다. 당시 우리는 3</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003-4j8daz.html">월 3천 찍고도 6개월 만에 나간 이유, 원가 공개</a>
+        <p class="post-item__summary">월 매출 3,200만원 찍던달 손에 쥔 건 170만원. 그마저도 다음달 치 보증금 보전이었다. 숫자만 보면 장사 잘되는줄 알았는데, 통장 잔고는 계속 줄었다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-1puptio.html">올드 파리 덩크가 병신같이 비싼 진짜 이유, 봉제선에 답 있다</a>
+        <p class="post-item__summary">대부분 사람들이 2003년 파리 덩크의 가격이 왜 그렇게 미쳐 날뛰는지 모른다. 예술 작품 콜라보, 한정 수량 같은 뻔한 얘기 말고. 진짜 차이는 박스 안에 있다. 아니, 정확히는 박스 그 자체와 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-1wjuddp.html">타일러 더든은 비행기 타기도 전에 이미 극장에 있었던 이유</a>
+        <p class="post-item__summary">IMDB 평점 8.8짜리 영화에서 &quot;감독이 관객의 눈을 속였다&quot;는 사실이 충격적으로 느껴지는가. 파이트 클럽은 그 짧은 프레임 하나로 영화사에서 유일무이한 논쟁을 만들어냈다. 블레이드 러너의 CG </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>

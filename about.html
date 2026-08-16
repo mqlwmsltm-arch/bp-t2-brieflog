@@ -1,20 +1,463 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>소개 - 접대 장소 추천 블로그</title>
- <meta name="description" content="접대 장소 추천 블로그의 운영자 소개와 전문성에 대한 정보입니다. 처음 방문자를 위한 조건별 선택 안내와 다양한 업종 정보를 제공합니다.">
- <meta name="keywords" content="접대 장소 추천, 블로그, 정보, 전문성, 셔츠룸, 룸싸롱, 텐프로, 텐카페, 쩜오, 하이퍼블릭, 풀싸롱, 가라오케, 노래방, 비즈니스클럽, 마사지, 펍">
- <link rel="canonical" href="https://brieflog.shop/about.html">
- <meta property="og:title" content="소개 - 접대 장소 추천 블로그">
- <meta property="og:description" content="접대 장소 추천 블로그의 운영자 소개와 전문성에 대한 정보입니다. 처음 방문자를 위한 조건별 선택 안내와 다양한 업종 정보를 제공합니다.">
- <meta property="og:url" content="https://brieflog.shop/about.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소개 - 접대 장소 추천 블로그</title>
+  <meta name="description" content="접대 장소 추천 블로그의 운영자 소개와 전문성에 대한 정보입니다. 처음 방문자를 위한 조건별 선택 안내와 다양한 업종 정보를 제공합니다.">
+  <link rel="canonical" href="https://brieflog.shop/about.html">
+  <meta property="og:title" content="소개 - 접대 장소 추천 블로그">
+  <meta property="og:description" content="접대 장소 추천 블로그의 운영자 소개와 전문성에 대한 정보입니다. 처음 방문자를 위한 조건별 선택 안내와 다양한 업종 정보를 제공합니다.">
+  <meta property="og:url" content="https://brieflog.shop/about.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* ---------- RESET & FONTS ---------- */
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Serif+KR:wght@300;400;700;900&display=swap');
+
+ *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ html { scroll-behavior: smooth; }
+ body {
+ font-family: 'Noto Serif KR', serif;
+ background-color: #1c1108;
+ color: #f9f4ec;
+ line-height: 1.7;
+ font-weight: 300;
+ -webkit-font-smoothing: antialiased;
+ background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(249,244,236,0.02) 2px, rgba(249,244,236,0.02) 4px);
+ background-size: 4px 4px;
+ }
+
+ /* Typography DNA */
+ h1, h2, h3, h4 {
+ font-family: 'Playfair Display', 'Noto Serif KR', serif;
+ font-weight: 700;
+ letter-spacing: -0.02em;
+ }
+ .display-font { font-family: 'Playfair Display', serif; }
+ .small-caps { font-variant: small-caps; letter-spacing: 0.1em; font-weight: 400; }
+
+ a { text-decoration: none; color: inherit; }
+
+ /* Bauhaus Geometry */
+ .geo-circle { border-radius: 50%; }
+ .geo-square { border-radius: 0px; }
+ .geo-triangle {
+ width: 0; height: 0;
+ border-left: 20px solid transparent;
+ border-right: 20px solid transparent;
+ border-bottom: 35px solid currentColor;
+ }
+
+ /* Container */
+ .r-top-tdo5 {
+ width: 90%;
+ max-width: 1320px;
+ margin: 0 auto;
+ }
+
+ /* Spacing */
+ .section-gap { margin-bottom: 120px; }
+ .pad-block { padding: 72px 0; }
+
+ /* Header */
+ .q-main-tmau {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 24px 0;
+ border-bottom: 2px double #9a7a3a;
+ position: relative;
+ }
+ .k-ico-5ed6 {
+ font-family: 'Playfair Display', serif;
+ font-size: 1.8rem;
+ font-weight: 900;
+ color: #f9f4ec;
+ letter-spacing: 1px;
+ }
+ .k-ico-5ed6 span {
+ color: #9a7a3a;
+ }
+
+ .k-btn-0mh4 {
+ display: flex;
+ gap: 48px;
+ align-items: center;
+ }
+ .k-btn-0mh4 a {
+ font-size: 0.85rem;
+ font-weight: 400;
+ color: #f9f4ec;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ position: relative;
+ padding-bottom: 4px;
+ }
+ .k-btn-0mh4 a::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 1px;
+ background: #9a7a3a;
+ transform: scaleX(0);
+ transition: transform 0.2s ease;
+ transform-origin: right;
+ }
+ .k-btn-0mh4 a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+ .k-foot-he8x {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ }
+ .k-foot-he8x span {
+ width: 28px;
+ height: 2px;
+ background: #f9f4ec;
+ display: block;
+ }
+
+ /* Hero Section */
+ .n-card-uryi {
+ position: relative;
+ min-height: 70vh;
+ display: flex;
+ align-items: center;
+ background: #1c1108;
+ overflow: hidden;
+ border-bottom: 2px solid #9a7a3a;
+ }
+ .n-card-uryi::before {
+ content: '';
+ position: absolute;
+ top: 0; left: 0; width: 100%; height: 100%;
+ background-image: linear-gradient(45deg, #9a7a3a 1px, transparent 1px), linear-gradient(-45deg, #9a7a3a 1px, transparent 1px);
+ background-size: 40px 40px;
+ opacity: 0.05;
+ pointer-events: none;
+ }
+ .n-card-uryi-content {
+ position: relative;
+ z-index: 2;
+ display: flex;
+ flex-direction: column;
+ gap: 24px;
+ max-width: 800px;
+ }
+ .n-card-uryi-label {
+ font-size: 0.9rem;
+ letter-spacing: 0.2em;
+ color: #9a7a3a;
+ border-left: 4px solid #9a7a3a;
+ padding-left: 16px;
+ font-weight: 400;
+ }
+ .n-card-uryi h1 {
+ font-size: clamp(3rem, 7vw, 5rem);
+ line-height: 1.1;
+ color: #f9f4ec;
+ font-weight: 900;
+ }
+ .n-card-uryi h1 i {
+ font-style: italic;
+ color: #9a7a3a;
+ }
+ .n-card-uryi p {
+ font-size: 1.2rem;
+ color: #e0d7cc;
+ max-width: 550px;
+ border-top: 1px solid #9a7a3a;
+ padding-top: 24px;
+ }
+ .k-box-ru5g-accent {
+ position: absolute;
+ right: 5%;
+ bottom: 10%;
+ width: 120px;
+ height: 120px;
+ border: 2px solid #9a7a3a;
+ transform: rotate(45deg);
+ opacity: 0.6;
+ z-index: 1;
+ }
+ .k-box-ru5g-dot {
+ position: absolute;
+ right: 12%;
+ top: 20%;
+ width: 24px;
+ height: 24px;
+ background: #9a7a3a;
+ border-radius: 50%;
+ z-index: 1;
+ }
+
+ /* Search & Filter Bar */
+ .k-box-ktw8-bar {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 24px;
+ padding: 32px 0;
+ border-bottom: 2px double #9a7a3a;
+ margin-bottom: 48px;
+ align-items: center;
+ justify-content: space-between;
+ }
+ .k-box-ktw8-input {
+ background: transparent;
+ border: none;
+ border-bottom: 1px solid #9a7a3a;
+ font-family: 'Noto Serif KR', serif;
+ font-size: 1.2rem;
+ color: #f9f4ec;
+ padding: 8px 0;
+ width: 300px;
+ outline: none;
+ }
+ .k-box-ktw8-input::placeholder { color: #8a7a5a; }
+ .r-list-zlgz {
+ display: flex;
+ gap: 32px;
+ flex-wrap: wrap;
+ }
+ .r-list-yiey-link {
+ font-weight: 700;
+ font-size: 1rem;
+ color: #f9f4ec;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ }
+ .r-list-yiey-link span {
+ background: #9a7a3a;
+ width: 12px;
+ height: 12px;
+ display: block;
+ }
+
+ /* Latest Posts Grid (Bauhaus Layout) */
+ .x-item-t5xk-bauhaus {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 0;
+ background: #1c1108;
+ }
+ .q-item-n5uu-bauhaus {
+ position: relative;
+ padding: 48px;
+ border: 1px solid rgba(154,122,58,0.3);
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ min-height: 420px;
+ transition: background 0.3s;
+ }
+ .q-item-n5uu-bauhaus:hover {
+ background: rgba(154,122,58,0.1);
+ }
+ .q-item-n5uu-top {
+ display: flex;
+ gap: 16px;
+ align-items: flex-start;
+ }
+ .m-box-4w9l-num {
+ font-family: 'Playfair Display', serif;
+ font-size: 4rem;
+ font-weight: 900;
+ color: #9a7a3a;
+ line-height: 1;
+ opacity: 0.8;
+ }
+ .q-item-n5uu h3 {
+ font-size: 1.8rem;
+ line-height: 1.2;
+ color: #f9f4ec;
+ margin-bottom: 8px;
+ }
+ .q-item-n5uu-meta {
+ font-size: 0.8rem;
+ letter-spacing: 0.1em;
+ color: #9a7a3a;
+ text-transform: uppercase;
+ margin-bottom: 16px;
+ }
+ .q-item-n5uu-line {
+ width: 100%;
+ height: 1px;
+ background: #9a7a3a;
+ margin: 24px 0;
+ }
+ .q-item-n5uu-excerpt {
+ font-size: 0.95rem;
+ color: #c0b6a8;
+ flex-grow: 1;
+ }
+ .q-hero-vp9r-link {
+ font-size: 1.2rem;
+ color: #9a7a3a;
+ font-weight: 700;
+ border-bottom: 2px solid #9a7a3a;
+ align-self: flex-start;
+ }
+
+ /* Timeline Section (Roman Numerals) */
+ .k-btn-c9s9 {
+ display: flex;
+ flex-direction: column;
+ gap: 0;
+ border-top: 2px solid #9a7a3a;
+ margin-top: 48px;
+ }
+ .n-grid-thcp {
+ display: grid;
+ grid-template-columns: 100px 1fr 2fr;
+ align-items: center;
+ padding: 32px 0;
+ border-bottom: 1px solid rgba(154,122,58,0.4);
+ }
+ .t-main-c8tr {
+ font-family: 'Playfair Display', serif;
+ font-size: 3rem;
+ color: #9a7a3a;
+ font-weight: 400;
+ text-align: center;
+ }
+ .n-grid-thcp-title {
+ font-size: 1.6rem;
+ font-weight: 700;
+ color: #f9f4ec;
+ }
+ .n-grid-thcp-desc {
+ font-size: 1rem;
+ color: #b3a68e;
+ padding-left: 16px;
+ border-left: 1px solid #9a7a3a;
+ }
+
+ /* Double Border Quote */
+ .n-hero-9hic-border {
+ border: 2px double #9a7a3a;
+ padding: 48px;
+ margin: 48px 0;
+ text-align: center;
+ font-size: 1.4rem;
+ font-style: italic;
+ color: #f9f4ec;
+ background: #0d0804;
+ }
+
+ /* Author Block */
+ .x-box-b1zx-block {
+ display: flex;
+ gap: 24px;
+ align-items: center;
+ padding: 32px;
+ border: 1px solid #9a7a3a;
+ background: #241a0f;
+ }
+ .x-box-b1zx-avatar {
+ width: 64px;
+ height: 64px;
+ background: #9a7a3a;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 2rem;
+ font-family: 'Playfair Display', serif;
+ color: #1c1108;
+ font-weight: 900;
+ }
+ .x-box-b1zx-info h4 {
+ color: #f9f4ec;
+ font-size: 1.2rem;
+ }
+ .x-box-b1zx-info p {
+ color: #aa9e8a;
+ font-size: 0.9rem;
+ }
+
+ /* FAQ */
+ .r-ico-ifq2-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2px;
+ background: #9a7a3a;
+ }
+ .r-ico-ifq2-item {
+ background: #1c1108;
+ padding: 40px;
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+ }
+ .r-ico-ifq2-q {
+ font-size: 1.3rem;
+ font-weight: 700;
+ color: #f9f4ec;
+ border-left: 4px solid #9a7a3a;
+ padding-left: 16px;
+ }
+ .r-ico-ifq2-a {
+ color: #b3a48c;
+ font-size: 0.95rem;
+ }
+
+ /* Footer */
+ .v-ico-lv8u {
+ padding: 48px 0;
+ border-top: 2px solid #9a7a3a;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: 0.8rem;
+ color: #8a7a5a;
+ }
+
+ @media (max-width: 768px) {
+ .k-btn-0mh4 { display: none; }
+ .k-btn-0mh4.open {
+ display: flex;
+ flex-direction: column;
+ position: absolute;
+ top: 80px;
+ left: 0;
+ width: 100%;
+ background: #1c1108;
+ padding: 24px;
+ gap: 24px;
+ z-index: 10;
+ border: 1px solid #9a7a3a;
+ }
+ .k-foot-he8x { display: flex; }
+ .x-item-t5xk-bauhaus { grid-template-columns: 1fr; }
+ .n-grid-thcp { grid-template-columns: 60px 1fr; }
+ .n-grid-thcp-desc { display: none; }
+ .r-ico-ifq2-grid { grid-template-columns: 1fr; }
+ }
+ </style>
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
- <nav>
+  <div class="container">
+    <header class="r-top-tdo5">
+ <div class="q-main-tmau">
+ <div class="k-ico-5ed6">BRIEF<span>LOG</span></div>
+ <nav class="k-btn-0mh4" id="mainNav">
+ <a href="#">조건별</a>
+ <a href="#">지역별</a>
+ <a href="#">분석</a>
+ <a href="#">FAQ</a>
+ <a href="posts.html">글 목록</a></nav>
+ <div class="k-foot-he8x" id="hamburger" onclick="document.getElementById('mainNav').classList.toggle('open')">
+ <span></span><span></span><span></span>
+ </div>
+ </div>
+ </header>
+    <main>
+<nav>
  <ul>
  <li><a href="#">홈</a></li>
  <li><a href="#">소개</a></li>
@@ -34,5 +477,7 @@
  <footer class="x-foot-4t1g">
  <p>&copy; 2023 접대 장소 추천 블로그</p>
  </footer>
+    </main>
+  </div>
 </body>
 </html>
